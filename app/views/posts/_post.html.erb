@@ -1,7 +1,11 @@
 <div id="<%= dom_id post %>">
   <p>
     <strong>Image:</strong>
-    <%= post.image %>
+    <% if post.image.present? %>
+      <%= image_tag post.image, alt: 'Image not found', onerror: "this.onerror=null;this.src='/path/to/default_image.png';" %>
+    <% else %>
+      <span>No image available</span>
+    <% end %>
   </p>
 
   <p>
