@@ -2,7 +2,7 @@
   <p>
     <strong>Image:</strong>
     <% if post.image.present? %>
-      <%= image_tag post.image, alt: 'Image not found', onerror: "this.onerror=null;this.src='/path/to/default_image.png';" %>
+      <%= image_tag post.image, alt: 'Image not found', onerror: "this.onerror=null;this.style.display='none';" %>
     <% else %>
       <span>No image available</span>
     <% end %>
