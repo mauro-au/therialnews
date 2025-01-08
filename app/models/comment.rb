@@ -1,15 +1,11 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: comments
 #
 #  id          :bigint           not null, primary key
-#  image       :string
-#  title       :string
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  user_id     :bigint           not null
 #
-class Post < ApplicationRecord
-  belongs_to :user
+class Comment < ApplicationRecord
 end
